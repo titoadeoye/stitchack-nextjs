@@ -3,28 +3,28 @@
 }
 
 #home .text {
-    margin: 0 2em;
-    width: 50%;
+    margin: 0 2rem;
+    width: 60%;
     align-self: baseline;
-    padding-bottom: 2em;
+    padding-bottom: 2rem;
 }
 
 #home h1 {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 62px;
+    font-size: 5rem;
+    line-height: 5.8rem;
     color: #f6e5f7;
+    margin-bottom: 1rem;
 }
 
 #home .landing {
-    /* margin-right: 2em; */
     width: 280px;
     height: 100%;
 }
 
 #home p {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
     color: #fff;
 }
 
@@ -47,81 +47,67 @@
     flex-direction: column;
     align-items: center;
     min-height: 400px;
-    padding-top: 100px;
     /* background: #3c31dd; */
-}
-
-#home .curve {
-    position: absolute;
-    height: 250px;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-}
-
-#home .curve::before {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    transform: translate(85%, 60%);
-    background-color: white;
-}
-
-#home .curve::after {
-    content: '';
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-    width: 55%;
-    height: 100%;
-    /* background: linear-gradient(139.52deg, #6251C3 -73.08%, #A800AB 150.16%); */
-    background: var(--background);
-    transform: translate(-4%, 40%);
-    z-index: -1;
 }
 
 #home .home-content {
     display: flex;
     justify-content: space-between;
+    padding-top: 10rem;
 }
 
 @media (max-width: 900px) {
     #home {
         height: auto;
     }
-    
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     #home .landing {
         position: absolute;
         right: 0;
-        top: 0;
+        bottom: 0;
+        height: 80%;
+    }
+
+    #home .home-content {
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #home p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        width: 90%;
+    }
+
+    #home section {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    #home .landing {
+        display: none;
+    }
+
+    #home .text {
+        width: 90%;
     }
 
     #home h1 {
-        font-size: 29px;
-        line-height: 32px;
+        font-size: 3rem;
+        line-height: 3.8rem;
     }
 
     #home p {
-        font-size: 12px;
-        line-height: 21px;
-        width: 90%;
+        font-size: 1rem;
+        line-height: 1.8rem;
     }
-    #home section {
-            padding-top: 40px;
-        }
 }
 
 @media (max-width: 460px) {
-    #home .text {
-        margin-left: 0.5em;
-    }
-
     #home .landing {
         width: 220px;
     }
@@ -136,18 +122,9 @@
         flex-direction: column;
     }
 
-    #home .text {
-        width: 100%;
-    }
-
     #home .landing {
         position: relative;
         width: 100%;
-        
-    }
-
-    #home .curve {
-        height: 150px;
     }
 }
 
@@ -167,5 +144,5 @@
         line-height: 1.6vw;
         margin: 1vw 0;
     }
-    
+
 }

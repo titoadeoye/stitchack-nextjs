@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "./Hero.style";
 import NavBar from "@/components/NavBar";
+import Link from "next/link";
 import "./hero.css";
 
 export default function Hero() {
@@ -17,7 +18,7 @@ export default function Hero() {
                 measurements , details, and styles so that you can readily
                 access them from any location at any time.
               </p>
-              <Button href="register">Get started</Button>
+              <Button><Link href="register">Get started</Link></Button>
             </div>
             <Image
               className="landing"
@@ -27,8 +28,6 @@ export default function Hero() {
               height="400"
             />
           </div>
-
-          <div class="curve"></div>
         </section>
       </div>
     </div>

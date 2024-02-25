@@ -42,10 +42,9 @@ export const Button = styled.button`
 `;
 
 export const Wrapper = styled(Navbar)`
-/* background: linear-gradient(139.52deg,#6251C3 -73.08%,#A800AB 150.16%); */
   background-color: transparent;
   height: 80px;
-  padding: 0;
+  padding: 0 2rem;
 
   @media (min-width: 1600px) {
     height: 10vh;

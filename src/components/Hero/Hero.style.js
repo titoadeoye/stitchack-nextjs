@@ -1,24 +1,22 @@
 'use client';
 
 import styled from "styled-components";
-import Link from "next/link";
 
 
-
-export const Button = styled(Link)`
+export const Button = styled.div`
     background: var(--white);
     border-radius: 10px;
     border: none;
     color: #141414;
     font-weight: 700;
     font-size: 1.3em;
-    padding: 13px 70px;
-    margin-top: 1em;
-
-    @media (max-width: 460px) {
-        width: 74%;
-        padding: 13px 9px;
-    }
+    height: 4rem;
+    width: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 2rem;
+    
 
     @media (min-width: 1600px) {
         margin-top: 1vw;
