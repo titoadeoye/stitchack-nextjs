@@ -1,10 +1,16 @@
-import styles from "./page.module.css";
-import Hero from "@/components/Hero";
+import { Hero, Services, About, Footer } from "@/components";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <Hero />
+      <Services />
+      <About />
+      <Footer />
+      {/* 
+            <FAQs />
+            <Reviews /> 
+            <Footer />  */}
     </main>
   );
 }
