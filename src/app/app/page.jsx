@@ -1,5 +1,3 @@
-"use client";
-
 // import { PageWrapper, Explore, OngoingOrders, Performance, DueToday, NewCustomers} from "../components";
 import { Page, Main, SideBar } from "./App.style";
 
@@ -9,12 +7,12 @@ export default function Home() {
       <Main>
         Dashboard
         {/* <Explore />
-                    <OngoingOrders />
-                    <NewCustomers /> */}
+        <OngoingOrders />
+        <NewCustomers /> */}
       </Main>
       <SideBar>
         {/* <Performance />
-                    <DueToday /> */}
+        <DueToday /> */}
       </SideBar>
     </Page>
   );
