@@ -7,6 +7,7 @@ import Reviews from "@/components/Reviews";
 import FAQs from "@/components/FAQs";
 import CustomInput from "@/components/CustomInput";
 import Loader from "@/components/Loader";
+import PageWrapper from "@/components/PageWrapper";
 
 
 export {
@@ -18,5 +19,6 @@ export {
   ThemeProvider,
   FAQs,
   CustomInput,
-  Loader
+  Loader,
+  PageWrapper
 };
