@@ -103,6 +103,11 @@ export const Wrapper = styled.div`
     font-weight: 600;
   }
 
+  @media (max-width: 520px) {
+    width: 30rem;
+  }
+
+
   @media (max-width: 425px) {
     width: 25rem;
   }

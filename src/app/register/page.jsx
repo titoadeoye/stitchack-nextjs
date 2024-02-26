@@ -34,105 +34,98 @@ export default function Register() {
       .oneOf([true], "You need to agree with our T&Cs")
   });
 
-
   return (
     <Wrapper>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={(values) => console.log(values)}
-          validationSchema={validationSchema}
-        >
-          {({
-            values,
-            handleSubmit,
-            handleBlur,
-            errors,
-            touched,
-            handleChange
-          }) => (
-            <Form onSubmit={handleSubmit}>
-              <h3>Sign Up</h3>
-              <CustomInput
-                name="firstname"
-                value={values.firstname}
-                onChange={handleChange}
-                placeholder="First name"
-                onBlur={handleBlur}
-                error={errors.firstname}
-                touched={touched.firstname}
-              />
-              <CustomInput
-                name="lastname"
-                value={values.lastname}
-                onChange={handleChange}
-                placeholder="Last Name"
-                onBlur={handleBlur}
-                error={errors.lastname}
-                touched={touched.lastname}
-              />
-              <CustomInput
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-                placeholder="Email"
-                type="email"
-                onBlur={handleBlur}
-                error={errors.email}
-                touched={touched.email}
-              />
-              <CustomInput
-                name="password"
-                value={values.password}
-                autoComplete="on"
-                onChange={handleChange}
-                placeholder="Password"
-                type="password"
-                onBlur={handleBlur}
-                error={errors.password}
-                touched={touched.password}
-              />
-              {touched.password && errors.password ? (
-                <Row>
-                  <p>Passwords must have: </p>
-                  <p className="purple">
-                    8 characters, one digit and one symbol.
-                  </p>
-                </Row>
-              ) : null}
+      <Formik
+        initialValues={initialValues}
+        onSubmit={(values) => console.log(values)}
+        validationSchema={validationSchema}
+      >
+        {({
+          values,
+          handleSubmit,
+          handleBlur,
+          errors,
+          touched,
+          handleChange
+        }) => (
+          <Form onSubmit={handleSubmit}>
+            <h3>Sign Up</h3>
+            <CustomInput
+              name="firstname"
+              value={values.firstname}
+              onChange={handleChange}
+              placeholder="First name"
+              onBlur={handleBlur}
+              error={errors.firstname}
+              touched={touched.firstname}
+            />
+            <CustomInput
+              name="lastname"
+              value={values.lastname}
+              onChange={handleChange}
+              placeholder="Last Name"
+              onBlur={handleBlur}
+              error={errors.lastname}
+              touched={touched.lastname}
+            />
+            <CustomInput
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              placeholder="Email"
+              type="email"
+              onBlur={handleBlur}
+              error={errors.email}
+              touched={touched.email}
+            />
+            <CustomInput
+              name="password"
+              value={values.password}
+              autoComplete="on"
+              onChange={handleChange}
+              placeholder="Password"
+              type="password"
+              onBlur={handleBlur}
+              error={errors.password}
+              touched={touched.password}
+            />
+            {touched.password && errors.password ? (
+              <Row>
+                <p>Passwords must have: </p>
+                <p className="purple">
+                  8 characters, one digit and one symbol.
+                </p>
+              </Row>
+            ) : null}
 
-              <CustomInput
-                name="iAgree"
-                checked={values.iAgree}
-                onChange={handleChange}
-                type="checkbox"
-                span={
-                  <>
-                    I agree with{" "}
-                    <Link href="/privacyPolicy" target="_blank">
-                      privacy
-                    </Link>{" "}
-                    and{" "}
-                    <Link href="/privacyPolicy" target="_blank">
-                      policy
-                    </Link>
-                  </>
-                }
-                onBlur={handleBlur}
-                error={errors.iAgree}
-                touched={touched.iAgree}
-                className="policy"
-              />
-              <Button type="submit" disabled={loading}>
-                {loading ? <Loader /> : "Sign up"}
-              </Button>
+            <CustomInput
+              name="iAgree"
+              checked={values.iAgree}
+              onChange={handleChange}
+              type="checkbox"
+              span={
+                <>
+                  I agree with <Link href="/#">privacy</Link> and{" "}
+                  <Link href="/#">policy</Link>
+                </>
+              }
+              onBlur={handleBlur}
+              error={errors.iAgree}
+              touched={touched.iAgree}
+              className="policy"
+            />
+            <Button type="submit" disabled={loading}>
+              {loading ? <Loader /> : "Sign up"}
+            </Button>
 
-              <Text>
-                Already have an account?
-                <Link href="/signin"> Sign in</Link>
-              </Text>
-            </Form>
-          )}
-        </Formik>
+            <Text>
+              Already have an account?
+              <Link href="/login"> Sign in</Link>
+            </Text>
+          </Form>
+        )}
+      </Formik>
     </Wrapper>
   );
 }
