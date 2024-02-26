@@ -5,6 +5,18 @@ import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
 import Reviews from "@/components/Reviews";
 import FAQs from "@/components/FAQs";
+import CustomInput from "@/components/CustomInput";
+import Loader from "@/components/Loader";
 
 
-export { Hero, Services, About, Footer, Reviews, ThemeProvider, FAQs };
+export {
+  Hero,
+  Services,
+  About,
+  Footer,
+  Reviews,
+  ThemeProvider,
+  FAQs,
+  CustomInput,
+  Loader
+};
